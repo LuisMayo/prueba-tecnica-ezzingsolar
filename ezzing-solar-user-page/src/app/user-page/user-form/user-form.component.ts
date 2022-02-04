@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, ViewChild } from '@angular/core';
 import { FormGroup, FormBuilder } from '@angular/forms';
 import { User } from '../bean/user';
 
@@ -9,7 +9,8 @@ import { User } from '../bean/user';
 })
 export class UserForm {
   @Input() users: User[] | undefined;
-  // form: FormGroup;
+  @ViewChild('userForm')
+  form!: FormGroup;
   constructor(
     private formBuilder: FormBuilder
   ) { }

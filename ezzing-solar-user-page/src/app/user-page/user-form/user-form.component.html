@@ -1,3 +1,5 @@
-<div>
-    <div *ngFor=""></div>
-</div>
+<form #userForm="ngForm">
+    <div *ngFor="let user of users; let i = index">
+        <input required [id]="user.id" name="user{{user.id}}" [(ngModel)]="user.name" pattern="^[\w\s]+$"/>
+    </div>
+</form>
