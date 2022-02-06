@@ -37,7 +37,7 @@ export class PokemonComponent {
     }
 
     
-    private async addPokemonsByTypes(types: Type[]) {
+    private async addPokemonsByTypes(types: Type[]): Promise<void> {
         // For each is clearer than for
         for (const type of types) {
             const pokemons = await this.getPokemonsByType(type);
